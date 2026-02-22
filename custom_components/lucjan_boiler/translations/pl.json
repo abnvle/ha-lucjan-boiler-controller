@@ -1,0 +1,34 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Połącz ze sterownikiem Lucjan",
+        "description": "Podaj adres IP sterownika Lucjan pieca CO.",
+        "data": {
+          "host": "Adres IP sterownika",
+          "username": "Nazwa użytkownika",
+          "password": "Hasło",
+          "scan_interval": "Interwał aktualizacji (sekundy)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Nie można połączyć ze sterownikiem. Sprawdź adres IP i czy urządzenie jest dostępne.",
+      "invalid_auth": "Nieprawidłowa nazwa użytkownika lub hasło.",
+      "unknown": "Wystąpił nieoczekiwany błąd."
+    },
+    "abort": {
+      "already_configured": "Ten sterownik jest już skonfigurowany."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opcje sterownika Lucjan",
+        "data": {
+          "scan_interval": "Interwał aktualizacji (sekundy)"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <!-- Main gradient - deep warm to hot -->
+    <linearGradient id="bgGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <!-- Flame gradient -->
+    <linearGradient id="flameGrad" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" style="stop-color:#e74c3c"/>
+      <stop offset="40%" style="stop-color:#f39c12"/>
+      <stop offset="100%" style="stop-color:#f1c40f"/>
+    </linearGradient>
+    <!-- Inner flame -->
+    <linearGradient id="flameInner" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" style="stop-color:#f39c12"/>
+      <stop offset="100%" style="stop-color:#fff3cd"/>
+    </linearGradient>
+    <!-- Boiler body gradient -->
+    <linearGradient id="boilerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a6fa5"/>
+      <stop offset="100%" style="stop-color:#2c3e6b"/>
+    </linearGradient>
+    <!-- Glow effect -->
+    <radialGradient id="glow" cx="50%" cy="60%" r="40%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#f39c12;stop-opacity:0"/>
+    </radialGradient>
+    <!-- Pipe gradient -->
+    <linearGradient id="pipeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a7fb5"/>
+      <stop offset="50%" style="stop-color:#3d5a8a"/>
+      <stop offset="100%" style="stop-color:#5a7fb5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="16" y="16" width="480" height="480" rx="80" ry="80" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle glow behind boiler -->
+  <ellipse cx="256" cy="300" rx="160" ry="140" fill="url(#glow)"/>
+
+  <!-- Boiler body -->
+  <rect x="156" y="160" width="200" height="240" rx="20" ry="20" fill="url(#boilerGrad)" stroke="#5a7fb5" stroke-width="3"/>
+  
+  <!-- Boiler front panel -->
+  <rect x="176" y="180" width="160" height="200" rx="10" ry="10" fill="#1a1a2e" opacity="0.5"/>
+
+  <!-- Temperature display -->
+  <rect x="196" y="195" width="120" height="50" rx="6" ry="6" fill="#0a0a1a" stroke="#3d5a8a" stroke-width="2"/>
+  
+  <!-- Digital temperature reading -->
+  <text x="256" y="232" text-anchor="middle" font-family="'Courier New', monospace" font-size="32" font-weight="bold" fill="#f1c40f" letter-spacing="2">55°C</text>
+
+  <!-- Flame section -->
+  <!-- Outer flame -->
+  <path d="M256 270 
+           C240 290, 210 300, 210 330
+           C210 365, 235 390, 256 390
+           C277 390, 302 365, 302 330
+           C302 300, 272 290, 256 270Z" 
+        fill="url(#flameGrad)" opacity="0.9"/>
+  
+  <!-- Inner flame -->
+  <path d="M256 300 
+           C248 312, 230 318, 230 335
+           C230 355, 245 368, 256 368
+           C267 368, 282 355, 282 335
+           C282 318, 264 312, 256 300Z" 
+        fill="url(#flameInner)" opacity="0.9"/>
+
+  <!-- Pipes left -->
+  <rect x="100" y="210" width="56" height="16" rx="8" ry="8" fill="url(#pipeGrad)"/>
+  <rect x="100" y="260" width="56" height="16" rx="8" ry="8" fill="url(#pipeGrad)"/>
+  <!-- Pipe connectors left -->
+  <circle cx="100" cy="218" r="10" fill="#3d5a8a" stroke="#5a7fb5" stroke-width="2"/>
+  <circle cx="100" cy="268" r="10" fill="#3d5a8a" stroke="#5a7fb5" stroke-width="2"/>
+
+  <!-- Pipes right -->
+  <rect x="356" y="210" width="56" height="16" rx="8" ry="8" fill="url(#pipeGrad)"/>
+  <rect x="356" y="260" width="56" height="16" rx="8" ry="8" fill="url(#pipeGrad)"/>
+  <!-- Pipe connectors right -->
+  <circle cx="412" cy="218" r="10" fill="#3d5a8a" stroke="#5a7fb5" stroke-width="2"/>
+  <circle cx="412" cy="268" r="10" fill="#3d5a8a" stroke="#5a7fb5" stroke-width="2"/>
+
+  <!-- Status LEDs -->
+  <circle cx="200" cy="260" r="5" fill="#2ecc71">
+    <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="218" cy="260" r="5" fill="#e74c3c" opacity="0.3"/>
+  <circle cx="236" cy="260" r="5" fill="#3498db">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- "L" brand mark -->
+  <text x="256" y="145" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="48" font-weight="bold" fill="#c0d0e0" letter-spacing="6">LUCJAN</text>
+
+  <!-- Bottom vent slots -->
+  <rect x="210" y="405" width="24" height="4" rx="2" fill="#3d5a8a" opacity="0.6"/>
+  <rect x="244" y="405" width="24" height="4" rx="2" fill="#3d5a8a" opacity="0.6"/>
+  <rect x="278" y="405" width="24" height="4" rx="2" fill="#3d5a8a" opacity="0.6"/>
+
+  <!-- WiFi/connectivity icon top right -->
+  <g transform="translate(380, 85)" opacity="0.5">
+    <path d="M0 12 A20 20 0 0 1 28 12" stroke="#5a7fb5" stroke-width="2.5" fill="none"/>
+    <path d="M5 8 A14 14 0 0 1 23 8" stroke="#5a7fb5" stroke-width="2.5" fill="none"/>
+    <path d="M9 4 A8 8 0 0 1 19 4" stroke="#5a7fb5" stroke-width="2.5" fill="none"/>
+    <circle cx="14" cy="14" r="3" fill="#5a7fb5"/>
+  </g>
+</svg>

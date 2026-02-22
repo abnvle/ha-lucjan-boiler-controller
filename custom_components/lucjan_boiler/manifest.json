@@ -1,0 +1,12 @@
+{
+  "domain": "lucjan_boiler",
+  "name": "Lucjan Boiler Controller",
+  "codeowners": ["@abnvle"],
+  "config_flow": true,
+  "documentation": "https://github.com/abnvle/ha-lucjan-boiler",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/abnvle/ha-lucjan-boiler/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
