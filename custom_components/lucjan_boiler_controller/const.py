@@ -1,6 +1,6 @@
 """Constants for the Lucjan Boiler integration."""
 
-DOMAIN = "lucjan_boiler"
+DOMAIN = "lucjan_boiler_controller"
 MANUFACTURER = "uzi18"
 
 # Config keys
