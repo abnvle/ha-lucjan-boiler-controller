@@ -1,5 +1,5 @@
 {
-  "domain": "lucjan_boiler",
+  "domain": "lucjan_boiler_controller",
   "name": "Lucjan Boiler Controller",
   "codeowners": ["@abnvle"],
   "config_flow": true,
