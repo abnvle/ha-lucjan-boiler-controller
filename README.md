@@ -4,6 +4,8 @@
 
 Integracja Home Assistant dla sterownika pieca CO **Lucjan** (projekt [uzi18/sterownik](https://github.com/uzi18/sterownik)) opartego na Arduino Mega.
 
+[![Otwórz repozytorium w HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=abnvle&repository=ha-lucjan-boiler-controller&category=integration)
+
 ## Funkcje
 
 ### Encje Climate (termostat)
